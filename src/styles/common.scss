@@ -5,7 +5,7 @@ body {
   text-rendering: optimizeSpeed;
   font: 12px 'RalewayRegular', sans-serif;
   min-width: 320px;
-  color: #000;
+  color: #15364b;
   background-color: #fff;
   position: relative;
 }
@@ -29,6 +29,34 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: 3;
+}
+.slick-arrow {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  font-size: 0;
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  z-index: 2;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../img/icons/ico-arrow.png') no-repeat center center;
+    background-size: 100% 100%;
+  }
+}
+.slick-prev {
+  left: 0;
+}
+.slick-next {
+  right: 0;
+  &:before {
+    transform: rotate(180deg);
+  }
 }
 
 .pacifico {
@@ -101,6 +129,16 @@ body {
       transform: translateY(45%);
     }
   }
+  &_style6 {
+    &:after {
+      width: 110%;
+      left: 0%;
+      bottom: 0;
+      height: 100%;
+      background: url('../img/backgrounds/decor_style6.png');
+      transform: translateY(0);
+    }
+  }
 }
 .button {
   color: #fff;
@@ -124,9 +162,10 @@ body {
 }
 .title {
   font-size: 24px;
-  font-family: 'RalewaySemiBold';
+  font-family: 'RalewayBold';
   display: block;
   text-align: center;
+  line-height: 1.1em;
 }
 
 @media all and(min-width: 576px) {
@@ -140,3 +179,7 @@ body {
 @import "./partials/info";
 @import "./partials/catalogue";
 @import "./partials/video";
+@import "./partials/banner";
+@import "./partials/advantages";
+@import "./partials/pluses";
+@import "./partials/kit";

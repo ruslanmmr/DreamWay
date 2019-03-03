@@ -1,6 +1,7 @@
 $(document).ready(function () {
   lazy();
-  nav();
+  //nav();
+  advantSlider();
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
@@ -103,4 +104,24 @@ function landingScroll() {
       }, 400)
     }
   })
+}
+//слайдер преимуществ
+function advantSlider() {
+  var slider = $('.advantages-slider');
+
+  if(innerWidth < 576) {
+    slider.slick({
+      arrows: true,
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      dots: false,
+      adaptiveHeight: true
+    });
+    slider.on('beforeChange', function(){
+      lazy();
+    });
+    slider.on('afterChange', function(){
+      lazy();
+    });
+  }
 }

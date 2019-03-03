@@ -1,0 +1,35 @@
+.advantages {
+  background-color: #fff;
+  .container {
+    padding: 0 35px;
+  }
+  &__container {
+    padding: 15px 0;
+  }
+  .slick-arrow {
+    top: 25px;
+  }
+}
+.advantages-slide {
+  &__image-container {
+    position: relative;
+    height: 80px;
+  }
+  &__image {
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+  }
+  &__text-container {
+    padding-top: 10px;
+    color: #15364b;
+    font-size: 8px;
+  }
+  &__title {
+    font-family: 'RalewayBold';
+  }
+  &__text {
+    margin: 0;
+  }
+}
