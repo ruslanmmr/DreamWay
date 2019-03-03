@@ -1,0 +1,10 @@
+@import "../_mixins/font-face";
+
+@include font-face("RalewaySemiBold", "../fonts/Raleway/RalewaySemiBold");
+@include font-face("RalewayRegular", "../fonts/Raleway/RalewayRegular");
+@include font-face("Pacifico", "../fonts/Pacifico/Pacifico");
+@include font-face("RalewayMedium", "../fonts/Raleway/RalewayMedium");
+@include font-face("RalewayThin", "../fonts/Raleway/RalewayThin");
+@include font-face("RalewayBold", "../fonts/Raleway/RalewayBold");
+@include font-face("HelveticaBold", "../fonts/Helvetica/HelveticaBold/HelveticaBold");
+

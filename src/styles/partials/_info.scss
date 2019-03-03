@@ -1,0 +1,56 @@
+.info {
+  background-color: #fff;
+  .container {
+    padding: 0 30px;
+  }
+  &__title {
+    color: #1e4b68;
+    font-size: 18px;
+    font-family: 'RalewayMedium';
+    text-align: center;
+    line-height: 1.4em;
+    padding-bottom: 15px;
+    .decorate {
+      font-size: 23px;
+      padding-right: 0.2em;
+      line-height: 1em;
+    }
+  }
+  &__content {
+    padding: 10px 0 0 0;
+  }
+  &__list {
+    margin: 0;
+    padding: 0 0 10px 0;
+  }
+  &__item {
+    display: block;
+    position: relative;
+    color: #1e4b68;
+    font-size: 8px;
+    padding: 0 0 10px 30px;
+    p {
+      margin: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: 0;
+      top: 0;
+      background: url('../../img/icons/ico-check.png') no-repeat center center;
+      background-size: 100% 100%;
+    }
+  }
+  &__background1 {
+    height: 175px;
+    width: 100vw;
+    margin-left: -30px;
+    background-size: cover !important;
+  }
+}

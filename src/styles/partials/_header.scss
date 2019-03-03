@@ -1,0 +1,116 @@
+.header {
+  background-color: #2d3d49;
+  position: relative;
+  &__stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat !important;
+    background-size: auto 83%;
+    background-position: center center;
+  }
+  .container {
+    padding: 0;
+  }
+  &__container {
+    height: 180px;
+    padding: 21px 0 45px 0;
+    position: relative;
+  }
+}
+.logo {
+  &__link {
+    display: block;
+    width: 130px;
+    margin: 0 auto;
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+  &__text {
+    span {
+      background-color: #c0c5c9;
+      padding: 2px 0;
+      color: #123c5e;
+      font-size: 9px;
+      display: block;
+      text-align: center;
+      &:nth-child(1) {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+.mobile-button {
+  transition: .3s;
+  width: 40px;
+  height: 28px;
+  z-index: 2;
+  display: block;
+  position: absolute;
+  top: 21px;
+  left: 28px;
+  span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    border-radius: 4px;
+    background-color: #f2c680;
+    transition: .3s;
+    &:before,
+    &:after {
+      display: block;
+      content: "";
+      height: 4px;
+      border-radius: 2px;
+      width: 100%;
+      background-color: #f2c680;
+      position: absolute;
+      transition: .3s;
+      left: 0;
+    }
+    &:before {
+      top: -12px;
+    }
+    &:after {
+      bottom: -12px;
+    }
+  }
+  &_active {
+    span {
+      background-color: transparent !important;
+      &:before {
+        transform: rotate(45deg);
+        top: 0px;
+      }
+      &:after {
+        transform: rotate(-45deg);
+        bottom: 0px;
+      }
+    }
+  }
+}
+.phone-button {
+  display: block;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  top: 21px;
+  right: 23px;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../../img/icons/ico-phone.svg') no-repeat center center;
+    background-size: 93% 93%;
+    transform: rotate(10deg);
+  }
+  
+}

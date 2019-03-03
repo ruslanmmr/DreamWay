@@ -1,0 +1,142 @@
+@import "./partials/normalize";
+@import "./partials/fonts";
+
+body {
+  text-rendering: optimizeSpeed;
+  font: 12px 'RalewayRegular', sans-serif;
+  min-width: 320px;
+  color: #000;
+  background-color: #fff;
+  position: relative;
+}
+.body__background {
+  background-size: 100% auto;
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 1;
+}
+.block {
+  position: relative;
+  z-index: 2;
+}
+.container {
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.pacifico {
+  font-family: 'Pacifico';
+}
+.decorate {
+  position: relative;
+  display: inline-block;
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  &:after {
+    content: '';
+    position: relative;
+    z-index: 1;
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat !important;
+    background-size: 100% auto !important;
+    background-position: center bottom !important;
+    transform: translateY(10%);
+  }
+  &_style1 {
+    &:after {
+      width: 110%;
+      left: -5%;
+      bottom: 0;
+      height: 100%;
+      background: url('../img/backgrounds/decor_style1.png');
+    }
+  }
+  &_style2 {
+    &:after {
+      width: 110%;
+      left: -5%;
+      bottom: 0;
+      height: 100%;
+      background: url('../img/backgrounds/decor_style2.png');
+      transform: translateY(5%);
+    }
+  }
+  &_style3 {
+    &:after {
+      width: 110%;
+      left: -5%;
+      bottom: 0;
+      height: 100%;
+      background: url('../img/backgrounds/decor_style3.png');
+      transform: translateY(5%);
+    }
+  }
+  &_style4 {
+    &:after {
+      width: 120%;
+      left: -10%;
+      bottom: 0;
+      height: 100%;
+      background: url('../img/backgrounds/decor_style4.png');
+      transform: translateY(5%);
+    }
+  }
+  &_style5 {
+    &:after {
+      width: 120%;
+      left: -10%;
+      bottom: 0;
+      height: 100%;
+      background: url('../img/backgrounds/decor_style5.png');
+      transform: translateY(45%);
+    }
+  }
+}
+.button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: #ed145b;
+  border: 2px solid #fff;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 45px;
+  padding: 0 40px;
+  transition: 0.3s;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 0px 25px -5px rgba(60,118,157,1);
+  &:hover {
+    background-color: #9e093b;
+  }
+}
+.title {
+  font-size: 24px;
+  font-family: 'RalewaySemiBold';
+  display: block;
+  text-align: center;
+}
+
+@media all and(min-width: 576px) {
+  
+}
+
+@import "./partials/normalize";
+@import "./partials/header";
+@import "./partials/footer";
+@import "./partials/home";
+@import "./partials/info";
+@import "./partials/catalogue";
+@import "./partials/video";
