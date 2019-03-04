@@ -15,6 +15,62 @@
     <div class="wrapper">
       <div class="wrapper__background lazy" data-src="img/backgrounds/background-page.png"></div>
       <div class="overlay"></div>
+      <div class="popup" id="modal1">
+        <div class="popup__container"><span class="popup__close"></span>
+          <div class="form">
+            <div class="form__container">
+              <button class="popup__close-button"></button><span class="form__title">Оставьте заявку на кокон DreamWay прямо сейчас!</span><span class="form__label">Акция продлится до 23.02.2019</span>
+              <form action="">
+                <div class="form__group"><span class="form__input-label">Имя:</span>
+                  <input class="form__input" type="text" required>
+                </div>
+                <div class="form__group"><span class="form__input-label">Телефон:</span>
+                  <input class="form__input" type="number" required>
+                </div>
+                <div class="form__group form__group_select"><span class="form__input-label">Выберите кокон:</span>
+                  <select class="form__select" required>
+                    <option disabled="disabled">Не выбрано</option>
+                    <option>Кокон1</option>
+                    <option>Кокон2</option>
+                  </select>
+                </div>
+                <button class="button form__button" type="submit">Заказать</button>
+              </form><span class="form__post-text">Нажимая на кнопку, Вы принимаете <a href="#">Положение </a>и <a href="#">Согласие </a>на обработку персональных данных.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="modal2">
+        <div class="popup__container"><span class="popup__close"></span>
+          <div class="form">
+            <div class="form__container">
+              <button class="popup__close-button"></button><span class="form__title">Оставьте заявку и мы вам перезвоним!</span>
+              <form action="">
+                <div class="form__group"><span class="form__input-label">Имя:</span>
+                  <input class="form__input" type="text" required>
+                </div>
+                <div class="form__group"><span class="form__input-label">Телефон:</span>
+                  <input class="form__input" type="number" required>
+                </div>
+                <button class="button form__button" type="submit">Заказать звонок</button>
+              </form><span class="form__post-text">Нажимая на кнопку, Вы принимаете <a href="#">Положение </a>и <a href="#">Согласие </a>на обработку персональных данных.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="modal3">
+        <div class="popup__container"><span class="popup__close"></span>
+          <div class="form">
+            <div class="form__container">
+              <button class="popup__close-button"></button><span class="form__title">Контакты</span>
+              <div class="number">
+                <div class="number__block"><span class="number__title">Москва</span><a class="number__link" href="tel:88129457878">8 (812) 945 78 78</a></div>
+                <div class="number__block"><span class="number__title">С-Петербург</span><a class="number__link" href="tel:84953214518">8 (495) 321 45 18</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <header class="header block"><span class="header__stars lazy" data-src="img/backgrounds/stars.png"></span><span class="header__background lazy" data-src="img/backgrounds/background-cloud.jpg"></span>
         <div class="container">
           <div class="header__container">
@@ -35,8 +91,8 @@
               <div class="number">
                 <div class="number__block"><span class="number__title">Москва</span><a class="number__link" href="tel:88129457878">8 (812) 945 78 78</a></div>
                 <div class="number__block"><span class="number__title">С-Петербург</span><a class="number__link" href="tel:84953214518">8 (495) 321 45 18</a></div>
-              </div><a class="button header__numbers-button" href="">заказать звонок</a>
-            </div><a class="phone-button" href="#"></a>
+              </div><a class="button header__numbers-button popup-link" href="#modal2">заказать звонок</a>
+            </div><a class="phone-button popup-link" href="#modal3"></a>
           </div>
         </div>
       </header>
@@ -105,7 +161,7 @@
                       <div class="catalogue-block__price-container"><span class="catalogue-block__price decorate decorate_style5"><span>Новая цена: 4990 р.</span></span><span class="catalogue-block__old-price">Старая цена: 6200 р.</span></div>
                     </div>
                   </div>
-                  <div class="catalogue-block__button-container"><a class="button catalogue-block__button" href="#">Заказать</a></div>
+                  <div class="catalogue-block__button-container"><a class="button catalogue-block__button popup-link" href="#modal1">Заказать</a></div>
                 </div>
                 <div class="catalogue-block">
                   <div class="catalogue-block__container">
@@ -115,7 +171,7 @@
                       <div class="catalogue-block__price-container"><span class="catalogue-block__price decorate decorate_style5"><span>Новая цена: 6990 р.</span></span><span class="catalogue-block__old-price">Старая цена: 8700 р.</span></div>
                     </div>
                   </div>
-                  <div class="catalogue-block__button-container"><a class="button catalogue-block__button" href="#">Заказать</a></div>
+                  <div class="catalogue-block__button-container"><a class="button catalogue-block__button popup-link" href="#modal1">Заказать</a></div>
                 </div>
               </div>
             </div>

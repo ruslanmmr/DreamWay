@@ -1,8 +1,10 @@
 $(document).ready(function () {
   lazy();
-  modals();
+  nav();
   Slider();
   landingScroll();
+  popup();
+  
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
@@ -11,7 +13,8 @@ $(window).resize(function () {
 //global variables
 var innerWidth = $('body').innerWidth(),
   mobileLink = $('.mobile-nav__link'),
-  scrollLink = $('.scroll-link');
+  scrollLink = $('.scroll-link'),
+  overlay = $('.overlay');
 
 
 //lazy
@@ -24,11 +27,10 @@ function lazy() {
   });
 }
 
-//nav, modals
-function modals() {
+//nav
+function nav() {
   var navButton = $('.mobile-button'),
-    nav = $('.mobile-nav'),
-    overlay = $('.overlay');
+    nav = $('.mobile-nav');
 
   navButton.click(function (event) {
     event.preventDefault();
@@ -68,6 +70,32 @@ function modals() {
       navState();
     }
   })
+}
+
+function popup() {
+  var openButton = $('.popup-link');
+  var closeButton = $('.popup__close-button, .popup__close');
+  var popup = $('.popup');
+
+  function closePopup() {
+    popup 
+      .animate({opacity: 0}, 300, 
+        function(){ 
+          $(this).css('display', 'none');
+      });
+    $('body').css('overflow', 'visible');
+  }
+
+  openButton.click( function(event){
+    event.preventDefault();
+    $($(this).attr('href')).css('display', 'block').animate({opacity: 1}, 300);
+    $('body').css('overflow', 'hidden');
+  });
+
+  closeButton.click( function(){
+    closePopup();
+  });
+
 }
 
 //якорные ссылки

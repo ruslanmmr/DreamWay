@@ -6,6 +6,67 @@ html(lang="ru")
     .wrapper
       .wrapper__background.lazy(data-src="img/backgrounds/background-page.png")
       .overlay
+      .popup(id='modal1')
+        .popup__container
+          span.popup__close
+          .form
+            .form__container
+              button.popup__close-button
+              span.form__title Оставьте заявку на кокон DreamWay прямо сейчас!
+              span.form__label Акция продлится до 23.02.2019
+              form(action="")
+                .form__group
+                  span.form__input-label Имя:
+                  input(type="text" required).form__input
+                .form__group
+                  span.form__input-label Телефон:
+                  input(type="number" required).form__input
+                .form__group.form__group_select
+                  span.form__input-label Выберите кокон:
+                  select.form__select(required)
+                    option(disabled="disabled") Не выбрано
+                    option Кокон1
+                    option Кокон2
+                button(type='submit').button.form__button Заказать
+              span.form__post-text Нажимая на кнопку, Вы принимаете 
+                a(href="#") Положение 
+                | и 
+                a(href="#") Согласие 
+                | на обработку персональных данных.
+      .popup(id='modal2')
+        .popup__container
+          span.popup__close
+          .form
+            .form__container
+              button.popup__close-button
+              span.form__title Оставьте заявку и мы вам перезвоним!
+              form(action="")
+                .form__group
+                  span.form__input-label Имя:
+                  input(type="text" required).form__input
+                .form__group
+                  span.form__input-label Телефон:
+                  input(type="number" required).form__input
+                button(type='submit').button.form__button Заказать звонок
+              span.form__post-text Нажимая на кнопку, Вы принимаете 
+                a(href="#") Положение 
+                | и 
+                a(href="#") Согласие 
+                | на обработку персональных данных.
+      .popup(id='modal3')
+        .popup__container
+          span.popup__close
+          .form
+            .form__container
+              button.popup__close-button
+              span.form__title Контакты
+              .number
+                .number__block
+                  span.number__title Москва
+                  a(href="tel:88129457878").number__link 8 (812) 945 78 78
+                .number__block
+                  span.number__title С-Петербург
+                  a(href="tel:84953214518").number__link 8 (495) 321 45 18
       include blocks/header
       include blocks/mobile-nav
       a(href="#").mobile-button
