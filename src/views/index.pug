@@ -2,18 +2,30 @@ doctype html
 html(lang="ru")
   head
     include blocks/head
-  body
-    .body__background.lazy(data-src="img/backgrounds/background-page.png")
-    include blocks/header
-    main.main
-      include blocks/home
-      include blocks/info
-      include blocks/catalogue
-      include blocks/video
-      include blocks/banner
-      include blocks/advantages
-      include blocks/pluses
-      include blocks/kit
+  body.body
+    .wrapper
+      .wrapper__background.lazy(data-src="img/backgrounds/background-page.png")
+      .overlay
+      include blocks/header
+      include blocks/mobile-nav
+      a(href="#").mobile-button
+        span
+      main.main
+        include blocks/home
+        include blocks/info
+        include blocks/catalogue
+        include blocks/video
+        include blocks/banner
+        include blocks/advantages
+        include blocks/pluses
+        include blocks/kit
+        include blocks/order
+        include blocks/delivery
+        include blocks/gallery
+        include blocks/reviews
+        include blocks/warranty
+        include blocks/form
+      include blocks/footer
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src="js/libs.min.js")                  
     script(src="js/common.min.js")

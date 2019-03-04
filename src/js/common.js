@@ -1,14 +1,17 @@
 $(document).ready(function () {
   lazy();
-  //nav();
-  advantSlider();
+  modals();
+  Slider();
+  landingScroll();
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
 });
 
 //global variables
-var innerWidth = $('body').innerWidth();
+var innerWidth = $('body').innerWidth(),
+  mobileLink = $('.mobile-nav__link'),
+  scrollLink = $('.scroll-link');
 
 
 //lazy
@@ -21,107 +24,139 @@ function lazy() {
   });
 }
 
-//mobile nav
-function nav() {
-  var navButton = $('.mobile-button, .mobile-nav__close'),
-      nav = $('.mobile-nav'),
-      overlay = $('.header__overlay');
+//nav, modals
+function modals() {
+  var navButton = $('.mobile-button'),
+    nav = $('.mobile-nav'),
+    overlay = $('.overlay');
 
-  navButton.click(function(event) {
+  navButton.click(function (event) {
     event.preventDefault();
     nav.toggleClass('mobile-nav_active');
-    stateCheck();
-  })
-  mobileLink.click(function() {
-    nav.removeClass('mobile-nav_active');
-    stateCheck();
+    navState();
   })
 
-  function stateCheck() {
-    if(nav.hasClass('mobile-nav_active')) {
+  mobileLink.click(function () {
+    nav.removeClass('mobile-nav_active');
+    navState();
+  })
+
+  function navState() {
+    if (nav.hasClass('mobile-nav_active')) {
       navButton.addClass('mobile-button_active');
       overlay.fadeIn(300);
       scrollLock.hide($("body"));
-      $('body').css('overflow', 'hidden')
+      $('body').addClass('body_hidden').addClass('body_active')
     } else {
       navButton.removeClass('mobile-button_active');
       overlay.fadeOut(300);
       scrollLock.show($("body"));
-      $('body').css('overflow', 'visible')
+      $('body').removeClass('body_hidden').removeClass('body_active');
     }
   }
   $(window).resize(function () {
-    if(innerWidth>768) {
+    if (innerWidth > 1199) {
       nav.removeClass('mobile-nav_active');
-      stateCheck();
+      navState();
     }
   });
-}
-//якорные ссылки
-function landingScroll() {
-  var headerHeight = $(".header").height();
-  var body = $("body");
-  var scrollLink = $('.scroll-link')
-  var desctopLink = $(".nav__link");
 
-  function scroll() {
-    if(body.hasClass("in-scroll")) {} else {
-      scrollLink.each(function () {
-        var window_top = $(window).scrollTop();
-        var div_1 = $(this).attr('href');
-        if($(div_1).length > 0) {
-          var div_top = $(div_1).offset().top;
-          var blockHeight = $(div_1).height();
-          if (window_top > (div_top - headerHeight) && window_top < (div_top - headerHeight) + blockHeight){
-            $('.nav__item').find('a').removeClass('scroll-link_active');
-            $('.nav__item').find('a[href="'+div_1+'"]').addClass('scroll-link_active');
-          } else {
-            $('.nav__item').find('a[href="'+div_1+'"]').removeClass('scroll-link_active');
-          };
-        }
-      });
-    }
-  }
-  $(window).scroll(function(){
-    scroll();
-  });
-  scrollLink.click(function (event) {
-    var id  = $(this).attr('href'),
-        top = $(id).offset().top - headerHeight + 1;
-    event.preventDefault();
-    scrollLink.removeClass('nav__link_active');
-    $(this).addClass('nav__link_active');
 
-    if (mobileLink.is(event.target)) {
-      setTimeout(function() {
-        $('body,html').animate({scrollTop: top}, 400);
-      }, 300)
-    } else if (desctopLink.is(event.target)) {
-      $('body,html').animate({scrollTop: top}, 400);
-      body.addClass("in-scroll");
-      setTimeout(function() {
-        body.removeClass("in-scroll");
-      }, 400)
+  overlay.on('click', function () {
+    if (nav.hasClass('mobile-nav_active')) {
+      nav.removeClass('mobile-nav_active');
+      navState();
     }
   })
 }
-//слайдер преимуществ
-function advantSlider() {
-  var slider = $('.advantages-slider');
 
-  if(innerWidth < 576) {
-    slider.slick({
+//якорные ссылки
+function landingScroll() {
+  scrollLink.click(function (event) {
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+    event.preventDefault();
+
+    if (mobileLink.is(event.target)) {
+      setTimeout(function () {
+        $('body,html').animate({
+          scrollTop: top
+        }, 400);
+      }, 300)
+    } else {
+      $('body,html').animate({
+        scrollTop: top
+      }, 400);
+    }
+  })
+}
+
+//слайдеры
+function Slider() {
+  var slider1 = $('.advantages-slider');
+  var slider2 = $('.reviews-slider');
+  var flag = true;
+
+  checkInit();
+
+  $(window).resize(function () {
+    checkInit();
+  });
+
+  function checkInit() {
+    if (innerWidth < 768) {
+      if (flag == true) {
+        sliderInit();
+        flag = false;
+      }
+    } else {
+      if (flag == false) {
+        slider1.slick('unslick');
+        slider2.slick('unslick');
+        flag = true;
+      }
+    }
+  }
+
+  function sliderInit() {
+    slider1.slick({
       arrows: true,
       slidesToScroll: 1,
       slidesToShow: 1,
       dots: false,
       adaptiveHeight: true
     });
-    slider.on('beforeChange', function(){
-      lazy();
-    });
-    slider.on('afterChange', function(){
-      lazy();
+    slider2.slick({
+      arrows: true,
+      slidesToScroll: 1,
+      dots: false,
+      adaptiveHeight: true,
+      responsive: [{
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+      ]
     });
   }
+
+  slider1.on('beforeChange', function () {
+    lazy();
+  });
+  slider1.on('afterChange', function () {
+    lazy();
+  });
+  slider2.on('beforeChange', function () {
+    lazy();
+  });
+  slider2.on('afterChange', function () {
+    lazy();
+  });
 }

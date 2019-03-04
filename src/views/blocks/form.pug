@@ -1,0 +1,27 @@
+.form-block.block
+  .form-block__background.lazy(data-src="img/backgrounds/background-form.png")
+  .container
+    .form-block__container
+      .form
+        .form__container
+          span.form__title Оставьте заявку на кокон DreamWay прямо сейчас!
+          span.form__label Акция продлится до 23.02.2019
+          form(action="")
+            .form__group
+              span.form__input-label Имя:
+              input(type="text" required).form__input
+            .form__group
+              span.form__input-label Телефон:
+              input(type="number" required).form__input
+            .form__group.form__group_select
+              span.form__input-label Выберите кокон:
+              select.form__select(required)
+                option(disabled="disabled") Не выбрано
+                option Кокон1
+                option Кокон2
+            button(type='submit').button.form__button Заказать
+          span.form__post-text Нажимая на кнопку, Вы принимаете 
+            a(href="#") Положение 
+            | и 
+            a(href="#") Согласие 
+            | на обработку персональных данных. 

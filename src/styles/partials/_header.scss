@@ -17,83 +17,14 @@
     padding: 21px 0 45px 0;
     position: relative;
   }
-}
-.logo {
-  &__link {
-    display: block;
-    width: 130px;
-    margin: 0 auto;
+  &__nav {
+    display: none;
   }
-  &__image {
-    width: 100%;
-    height: auto;
+  &__section {
+    position: relative;
   }
-  &__text {
-    span {
-      background-color: #c0c5c9;
-      padding: 2px 0;
-      color: #123c5e;
-      font-size: 9px;
-      display: block;
-      text-align: center;
-      &:nth-child(1) {
-        margin-bottom: 2px;
-      }
-    }
-  }
-}
-.mobile-button {
-  transition: .3s;
-  width: 40px;
-  height: 28px;
-  z-index: 2;
-  display: block;
-  position: absolute;
-  top: 21px;
-  left: 28px;
-  span {
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 40px;
-    left: 0;
-    position: absolute;
-    top: 50%;
-    margin-top: -2px;
-    border-radius: 4px;
-    background-color: #f2c680;
-    transition: .3s;
-    &:before,
-    &:after {
-      display: block;
-      content: "";
-      height: 4px;
-      border-radius: 2px;
-      width: 100%;
-      background-color: #f2c680;
-      position: absolute;
-      transition: .3s;
-      left: 0;
-    }
-    &:before {
-      top: -12px;
-    }
-    &:after {
-      bottom: -12px;
-    }
-  }
-  &_active {
-    span {
-      background-color: transparent !important;
-      &:before {
-        transform: rotate(45deg);
-        top: 0px;
-      }
-      &:after {
-        transform: rotate(-45deg);
-        bottom: 0px;
-      }
-    }
+  &__numbers {
+    display: none;
   }
 }
 .phone-button {
@@ -113,4 +44,134 @@
     transform: rotate(10deg);
   }
   
+}
+
+@media all and(min-width: 576px) {
+  .header {
+    .logo__text span {
+      font-size: 14px;
+    }
+  }
+}
+@media all and(min-width: 1200px) {
+  .header {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 0;
+    background-color: transparent;
+    .container {
+      padding: 0 15px;
+    }
+    &__background {
+      background-color: rgba(255, 255, 255, 0.7);
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat !important;
+      background-size: cover;
+      background-position: center bottom;
+      opacity: 0.6;
+    }
+    &__container {
+      height: 160px;
+      padding: 25px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__stars {
+      display: none;
+    }
+    .logo {
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      height: 100%;
+      &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 50px;
+        span {
+          background-color: rgba(255, 255, 255, 0.7);
+          padding: 3px 10px;
+          padding-left: 250px;
+          font-size: 16px;
+          letter-spacing: 0.5px;
+        }
+      }
+      &__link {
+        width: 300px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    &__nav {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      &-list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      &-item {
+        padding-left: 55px;
+      }
+      &-link {
+        color: #fff;
+        font-size: 18px;
+        font-family: 'RalewaySemiBold';
+        text-decoration: none;
+        transition: opacity 0.3s;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    &__numbers {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      height: 100%;
+      &-button {
+        font-size: 24px;
+        border-color: #fff;
+        background-color: #f2c680;
+        display: inline-block;
+        padding: 4px 25px;
+        height: auto;
+        color: #2d465a;
+        &:hover {
+          background-color: #dfaa57;
+        }
+      }
+    }
+    .number {
+      text-align: right;
+      &__block {
+        overflow: hidden;
+        &:last-child {
+          margin-top: 7px;
+        }
+      }
+      &__title {
+        font-size: 16px;
+        color: #2d465a;
+        padding-right: 10px;
+      }
+      &__link {
+        font-size: 24px;
+        font-family: 'RalewaySemiBold';
+        text-decoration: none;
+        color: #2d465a;
+        line-height: 1em;
+      }
+    }
+  }
 }

@@ -1,0 +1,124 @@
+.reviews {
+  background-color: #fff;
+  color: #203644;
+  &__container {
+    padding: 20px 10px 15px 10px;
+  }
+}
+.reviews-slider {
+  position: relative;
+  display: flex;
+  .slick-track {
+    display: flex;
+    height: 100%;
+  }
+  .slick-list {
+    margin: 0 -10px;
+  }
+  .slick-arrow {
+    top: 90px;
+  }
+  .slick-next {
+    right: 20px;
+  }
+  .slick-prev {
+    left: 20px;
+  }
+}
+.reviews-slide {
+  font-size: 14px;
+  padding: 0 10px;
+  flex-shrink: 0;
+  width: 33.33%;
+  &__container {
+    padding: 35px 25px 20px 25px;
+    border: 1px solid #11aefe;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+  &__image-container {
+    height: 140px;
+    width: 140px;
+    margin: 0 auto;
+    border-radius: 100%;
+    border: 2px solid #f9c97d;
+    overflow: hidden;
+  }
+  &__image {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
+  &__info-container,
+  &__text-container {
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 39px;
+      height: 32px;
+      background: url('../../img/icons/ico-quotes.png') no-repeat center center;
+    }
+  }
+  &__text-container {
+    padding: 30px 0;
+    &:before {
+      right: -10px;
+      top: -10px;
+    }
+  }
+  &__info-container {
+    &:before {
+      top: 0;
+      left: 0;
+    }
+  }
+  &__text {
+    margin: 0;
+  }
+  &__name {
+    font-family: 'RalewaySemiBold';
+    padding-bottom: 0.1em;
+  }
+  &__name,
+  &__info {
+    display: block;
+    text-align: right;
+  }
+}
+
+@media all and(min-width: 576px) {
+  .reviews__container {
+    padding: 30px 0 45px 0;
+  }
+  .reviews-slider .slick-arrow {
+    top: 84px;
+  }
+  .reviews-slider .slick-prev {
+    left: 10px;
+  }
+  .reviews-slider .slick-next {
+    right: 10px;
+  }
+}
+@media all and(min-width: 768px) {
+  .reviews {
+    background-color: transparent;
+  }
+  .reviews-slider {
+    margin: 0 -10px;
+  }
+}
+@media all and(min-width: 1200px) {
+  .reviews-slide {
+    padding: 0 25px;
+  }
+  .reviews__container {
+    padding: 55px 90px 60px 90px;
+  }
+}

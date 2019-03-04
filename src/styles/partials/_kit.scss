@@ -1,11 +1,10 @@
 .kit {
   background-color: #fff;
   &__container {
-    padding: 15px 0 0 0;
+    padding: 20px 0 0 0;
   }
   &__title {
     color: #009dff;
-    padding-bottom: 15px;
   }
   &__content {
     display: flex;
@@ -26,9 +25,6 @@
     width: auto;
     margin: 0 auto;
   }
-  &__text-container {
-    padding: 10px 0 0 0;
-  }
   &__title {
     font-size: 14px;
     font-family: 'RalewayBold';
@@ -40,3 +36,51 @@
     text-align: center;
   }
 }
+
+@media all and(min-width: 576px) {
+  .kit {
+    &__container {
+      padding: 35px 0 15px 0;
+    }
+    &__content {
+      padding: 0;
+      margin: 0 -10px;
+    }
+  }
+  .kit-block {
+    width: 50%;
+    padding: 0 10px 25px 10px;
+    &__title {
+      font-size: 16px;
+    }
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+@media all and(min-width: 992px) {
+  .kit-block {
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+    &__image-container {
+      width: 270px;
+      height: 140px;
+      flex-shrink: 0;
+    }
+    &__title {
+      text-align: left;
+      font-size: 18px;
+    }
+    &__text {
+      text-align: left;
+    }
+  }
+}
+@media all and(min-width: 1200px) {
+  .kit__container {
+    padding: 60px 0 40px 0;
+  }
+}
+

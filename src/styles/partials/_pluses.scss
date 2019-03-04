@@ -39,9 +39,55 @@
         height: 30px;
         left: 0;
         top: 0;
-        background: url('../../img/icons/ico-pluses.png') no-repeat center center;
+        background: url('../img/icons/ico-pluses.png') no-repeat center center;
         background-size: 100% 100%;
       }
     }
+  }
+}
+
+@media all and(min-width: 576px) {
+  .pluses {
+    &__container {
+      padding: 35px 0 10px 0;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+    &__item {
+      font-size: 14px;
+      width: 50%;
+      padding: 0 15px 30px 15px;
+    }
+    &__title {
+      margin-bottom: 30px;
+      &:after {
+        width: 50%;
+        left: 25%;
+      }
+    }
+  }
+}
+@media all and(min-width: 992px) {
+  .pluses__item {
+    font-size: 18px;
+  }
+  .pluses__item span {
+    padding-left: 50px;
+    min-height: 35px;
+    &::before {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+@media all and(min-width: 1200px) {
+  .pluses__container {
+    padding: 60px 150px 50px 150px;
+  }
+  .pluses__title {
+    margin-bottom: 60px;
   }
 }

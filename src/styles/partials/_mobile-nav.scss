@@ -1,0 +1,34 @@
+.mobile-nav {
+  background-color: #fff;
+  position: fixed;
+  height: 100%;
+  width: 230px;
+  z-index: 20;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  &__container {
+    padding: 15px 0 0 0;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    display: block;
+  }
+  &__link {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #123c5e;
+    font-family: 'RalewaySemiBold';
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    transition: 0.3s;
+    &:hover {
+      background-color: #f3f3f3;
+    }
+  }
+}

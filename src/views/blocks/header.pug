@@ -1,5 +1,6 @@
 header.header.block
   span.header__stars.lazy(data-src="img/backgrounds/stars.png")
+  span.header__background.lazy(data-src="img/backgrounds/background-cloud.jpg")
   .container
     .header__container
       .header__section
@@ -9,7 +10,24 @@ header.header.block
           .logo__text
             span ОФИЦИАЛЬНЫЙ ПРЕДСТАВИТЕЛЬ И ПОСТАВЩИК ТОВАРОВ
             span ДЛЯ НОВОРОЖДЕННЫХ С ДОСТАВКОЙ ПО ВСЕЙ РОССИИ
-      a(href="#").mobile-button
-        span
+        .header__nav
+          ul.header__nav-list
+            li.header__nav-item
+              a(href="#info").header__nav-link.scroll-link О компании
+            li.header__nav-item
+              a(href="#order").header__nav-link.scroll-link Оплата
+            li.header__nav-item
+              a(href="#delivery").header__nav-link.scroll-link Доставка
+            li.header__nav-item
+              a(href="#reviews").header__nav-link.scroll-link Отзывы
+      .header__numbers
+        .number
+          .number__block
+            span.number__title Москва
+            a(href="tel:88129457878").number__link 8 (812) 945 78 78
+          .number__block
+            span.number__title С-Петербург
+            a(href="tel:84953214518").number__link 8 (495) 321 45 18
+        a(href="").button.header__numbers-button заказать звонок
       a(href="#").phone-button
       

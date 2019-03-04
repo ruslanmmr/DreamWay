@@ -3,16 +3,17 @@
     padding: 0 15px;
   }
   &__container {
-    padding: 30px 0 35px 0;
+    padding: 20px 0 35px 0;
   }
   &__title {
     color: #16557d;
-    padding-bottom: 30px;
     font-family: 'RalewayBold';
   }
   &__content {
     position: relative;
     background-color: rgba(0, 0, 0, 0.2);
+    max-width: 565px;
+    margin: 0 auto;
     &:before {
       content: '';
       display: block;
@@ -24,5 +25,21 @@
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+@media all and(min-width: 576px) {
+  .video {
+    &__container {
+      padding: 35px 0 45px 0;
+    }
+    .container {
+      padding: 0 20px;
+    }
+  }
+}
+@media all and(min-width: 1200px) {
+  .video__container {
+    padding: 60px 0 100px 0;
   }
 }

@@ -1,0 +1,109 @@
+.order {
+  &__title {
+    padding: 17px 0;
+    background-color: #16557d;
+    color: #fff;
+  }
+  &__container {
+    padding: 5px 0 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+}
+.order-block {
+  width: 50%;
+  padding: 10px 15px;
+  color: #133951;
+  &__image-container {
+    height: 70px;
+    margin-bottom: 6px;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: 0;
+      transform: translateX(100%);
+      background: url('../img/icons/ico-arrow2.png') no-repeat center center;
+      background-size: 100% auto;
+      display: none;
+      top: 18px;
+    }
+  }
+  &:nth-child(odd) {
+    .order-block__image-container {
+      &:after {
+        display: block;
+      }
+    }
+  }
+  &__image {
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  &__title {
+    display: block;
+    text-align: center;
+    font-family: 'RalewayBold';
+  }
+  &__text {
+    font-size: 9px;
+    text-align: center;
+    display: block;
+  }
+}
+
+@media all and(min-width: 576px) {
+  .order__title {
+    padding: 25px 0;
+  }
+  .order-block__title {
+    font-size: 16px;
+  }
+  .order-block__text {
+    font-size: 14px;
+  }
+  .order__container {
+    padding: 25px 0;
+  }
+  .order-block__image-container {
+    height: 85px;
+  }
+  .order-block__image-container:after {
+    top: 25px;
+  }
+}
+@media all and(min-width: 992px) {
+  .order-block {
+    width: 25%;
+  }
+  .order-block:not(:last-child) .order-block__image-container:after {
+    display: block;
+  }
+}
+@media all and(min-width: 1200px) {
+  .order-block__title {
+    font-size: 18px;
+  }
+  .order__title {
+    padding: 45px 0;
+  }
+  .order__container {
+    padding: 80px 80px 60px 80px;
+  }
+  .order-block__image-container {
+    height: 100px;
+    margin-bottom: 15px;
+    &:after {
+      top: 27px;
+      width: 45px;
+      height: 38px;
+      transform: translateX(35px);
+    }
+  }
+}
