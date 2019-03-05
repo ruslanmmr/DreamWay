@@ -1,7 +1,7 @@
 .kit {
   background-color: #fff;
   &__container {
-    padding: 20px 0 0 0;
+    padding: 20px 0 5px 0;
   }
   &__title {
     color: #009dff;
@@ -9,7 +9,7 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 30px;
+    padding: 0 15px;
   }
 }
 .kit-block {
@@ -26,10 +26,10 @@
     margin: 0 auto;
   }
   &__title {
-    font-size: 14px;
     font-family: 'RalewayBold';
     display: block;
     text-align: center;
+    font-size: 16px;
   }
   &__text {
     display: block;

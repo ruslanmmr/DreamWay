@@ -1,23 +1,20 @@
 .info {
   background-color: #fff;
-  .container {
-    padding: 0 30px;
-  }
   &__title {
     color: #1e4b68;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'RalewayMedium';
     text-align: center;
     line-height: 1.4em;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     .decorate {
-      font-size: 23px;
+      font-size: 24px;
       padding-right: 0.2em;
       line-height: 1em;
     }
   }
   &__content {
-    padding: 10px 0 0 0;
+    padding: 20px 0 0 0;
   }
   &__list {
     margin: 0;
@@ -27,11 +24,7 @@
     display: block;
     position: relative;
     color: #1e4b68;
-    font-size: 8px;
-    padding: 0 0 10px 30px;
-    p {
-      margin: 0;
-    }
+    padding: 0 0 15px 35px;
     &:last-child {
       padding-bottom: 0;
     }
@@ -39,12 +32,18 @@
       content: '';
       display: block;
       position: absolute;
-      width: 15px;
-      height: 15px;
+      width: 25px;
+      height: 25px;
       left: 0;
       top: 0;
       background: url('../img/icons/ico-check.png') no-repeat center center;
       background-size: 100% 100%;
+    }
+  }
+  &__text {
+    margin: 0;
+    &_desktop {
+      display: none;
     }
   }
   &__background1 {
@@ -58,8 +57,11 @@
 
 @media all and(min-width: 576px) {
   .info {
-    .container {
-      padding: 0 35px;
+    &__text_mobile {
+      display: none;
+    }
+    &__text_desktop {
+      display: block;
     }
     &__title {
       font-size: 24px;
@@ -70,7 +72,6 @@
       padding-top: 35px;
     }
     &__item {
-      font-size: 14px;
       padding: 0 0 15px 45px;
       &:before {
         height: 30px;

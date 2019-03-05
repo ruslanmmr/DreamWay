@@ -25,13 +25,12 @@
                   <input class="form__input" type="text" required>
                 </div>
                 <div class="form__group"><span class="form__input-label">Телефон:</span>
-                  <input class="form__input" type="number" required>
+                  <input class="form__input phone-input" type="text" required>
                 </div>
                 <div class="form__group form__group_select"><span class="form__input-label">Выберите кокон:</span>
                   <select class="form__select" required>
-                    <option disabled="disabled">Не выбрано</option>
-                    <option>Кокон1</option>
-                    <option>Кокон2</option>
+                    <option class="form__option" data-value="1">DreamWay Ortho</option>
+                    <option class="form__option" data-value="2">DreamWay Comfort Memory</option>
                   </select>
                 </div>
                 <button class="button form__button" type="submit">Заказать</button>
@@ -50,7 +49,7 @@
                   <input class="form__input" type="text" required>
                 </div>
                 <div class="form__group"><span class="form__input-label">Телефон:</span>
-                  <input class="form__input" type="number" required>
+                  <input class="form__input phone-input" type="text" required>
                 </div>
                 <button class="button form__button" type="submit">Заказать звонок</button>
               </form><span class="form__post-text">Нажимая на кнопку, Вы принимаете <a href="#">Положение </a>и <a href="#">Согласие </a>на обработку персональных данных.</span>
@@ -128,19 +127,24 @@
                 <div class="info__title"><span class="pacifico decorate decorate_style2"><span>DreamWay </span></span>— это товары которые помогают вам заботиться о малышах</div>
                 <ul class="info__list">
                   <li class="info__item">
-                    <p>Кокон для новорожденных представляет собой эргономическое приспособление, помогающее малышу легко перенести период адаптации к окружающему миру.</p>
+                    <p class="info__text info__text_desktop">Кокон для новорожденных представляет собой эргономическое приспособление, помогающее малышу легко перенести период адаптации к окружающему миру.</p>
+                    <p class="info__text info__text_mobile">Кокон для новорожденных представляет собой эргономическое приспособление...</p>
                   </li>
                   <li class="info__item">
-                    <p>Период использования с 0 до 4 - 6 мес. в зависимости от активности малыша. DreamWay занимается разработкой и производством товаров премиум-класса для новорожденных.</p>
+                    <p class="info__text info__text_desktop">Период использования с 0 до 4 - 6 мес. в зависимости от активности малыша. DreamWay занимается разработкой и производством товаров премиум-класса для новорожденных.</p>
+                    <p class="info__text info__text_mobile">Период использования с 0 до 4 - 6 мес. в зависимости от активности малыша. DreamWay занимается разработкой...</p>
                   </li>
                   <li class="info__item">
-                    <p>Вся продукция компании разрабатывается в тесном сотрудничестве с ведущими педиатрами и специалистами в области детского развития. Неудивительно, что множество роддомов и приемных отделений успешно используют ее в своей повседневной работе.</p>
+                    <p class="info__text info__text_desktop">Вся продукция компании разрабатывается в тесном сотрудничестве с ведущими педиатрами и специалистами в области детского развития. Неудивительно, что множество роддомов и приемных отделений успешно используют ее в своей повседневной работе.</p>
+                    <p class="info__text info__text_mobile">Вся продукция компании разрабатывается в тесном сотрудничестве с ведущими педиатрами...</p>
                   </li>
                   <li class="info__item">
-                    <p>И, конечно, преимущества моделей DreamWay по достоинству оценили сотни тысяч счастливых родителей по всему миру.</p>
+                    <p class="info__text info__text_desktop">И, конечно, преимущества моделей DreamWay по достоинству оценили сотни тысяч счастливых родителей по всему миру.</p>
+                    <p class="info__text info__text_mobile">И, конечно, преимущества моделей DreamWay по достоинству...</p>
                   </li>
                   <li class="info__item">
-                    <p>В производстве используются только безопасные материалы экологического класса не ниже EP-17. И, прежде чем поступить в продажу, все модели проходят многократные исследования и тестирования самого высокого уровня.</p>
+                    <p class="info__text info__text_desktop">В производстве используются только безопасные материалы экологического класса не ниже EP-17. И, прежде чем поступить в продажу, все модели проходят многократные исследования и тестирования самого высокого уровня.</p>
+                    <p class="info__text info__text_mobile">В производстве используются только безопасные материалы экологического...</p>
                   </li>
                 </ul>
                 <div class="info__background1 lazy" data-src="img/backgrounds/background-info.png"></div>
@@ -153,7 +157,7 @@
           <div class="container">
             <div class="catalogue__container"><span class="title catalogue__title"><span class="decorate decorate_style3"> <span>Два уровня комфорта </span></span><span class="decorate decorate_style4"><span>для малыша</span></span></span>
               <div class="catalogue__content">
-                <div class="catalogue-block">
+                <div class="catalogue-block" data-value="1">
                   <div class="catalogue-block__container">
                     <div class="catalogue-block__title-section"><span class="catalogue-block__title">Кокон для новорожденных DreamWay Ortho </span><span class="catalogue-block__sub-title">со специальным наполнителем</span></div>
                     <div class="catalogue-block__bottom-section">
@@ -163,7 +167,7 @@
                   </div>
                   <div class="catalogue-block__button-container"><a class="button catalogue-block__button popup-link" href="#modal1">Заказать</a></div>
                 </div>
-                <div class="catalogue-block">
+                <div class="catalogue-block" data-value="2">
                   <div class="catalogue-block__container">
                     <div class="catalogue-block__title-section"><span class="catalogue-block__title">Кокон для новорожденных DreamWay  Comfort Memory</span><span class="catalogue-block__sub-title">улучшенный наполнитель с эффектом памяти</span></div>
                     <div class="catalogue-block__bottom-section">
@@ -409,13 +413,13 @@
                       <input class="form__input" type="text" required>
                     </div>
                     <div class="form__group"><span class="form__input-label">Телефон:</span>
-                      <input class="form__input" type="number" required>
+                      <input class="phone-input form__input" type="text" required>
                     </div>
                     <div class="form__group form__group_select"><span class="form__input-label">Выберите кокон:</span>
                       <select class="form__select" required>
-                        <option disabled="disabled">Не выбрано</option>
-                        <option>Кокон1</option>
-                        <option>Кокон2</option>
+                        <option>Не выбрано</option>
+                        <option>DreamWay Ortho</option>
+                        <option>DreamWay Comfort Memory</option>
                       </select>
                     </div>
                     <button class="button form__button" type="submit">Заказать</button>

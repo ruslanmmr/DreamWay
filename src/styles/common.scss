@@ -3,7 +3,7 @@
 
 body {
   text-rendering: optimizeSpeed;
-  font: 12px 'RalewayRegular', sans-serif;
+  font: 14px 'RalewayRegular', sans-serif;
   min-width: 320px;
   color: #15364b;
   position: relative;
@@ -37,15 +37,15 @@ body {
 }
 .container {
   max-width: 1170px;
-  padding: 0 20px;
+  padding: 0 15px;
   margin: 0 auto;
   position: relative;
   z-index: 3;
 }
 .slick-arrow {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   font-size: 0;
   border: 0;
   background: transparent;
@@ -85,7 +85,7 @@ body {
       background-color: #c0c5c9;
       padding: 2px 0;
       color: #123c5e;
-      font-size: 9px;
+      font-size: 10px;
       display: block;
       text-align: center;
       &:nth-child(1) {
@@ -235,7 +235,7 @@ body {
       bottom: 0;
       height: 100%;
       background: url('../img/backgrounds/decor_style6.png');
-      transform: translateY(0);
+      transform: translateY(25%);
     }
   }
   &_style7 {
@@ -365,15 +365,23 @@ body {
     height: 45px;
     width: 45px;
   }
+  .container {
+    padding: 0 20px;
+  }
+}
+@media all and(min-width: 768px) {
+  .mobile-button,
+  .phone-button {
+    display: none !important;
+  }
 }
 @media all and(min-width: 1200px) {
   .title {
     font-size: 48px;
     padding-bottom: 40px;
   }
-  .mobile-button,
-  .phone-button {
-    display: none !important;
+  .container {
+    padding: 0 15px;
   }
 }
 

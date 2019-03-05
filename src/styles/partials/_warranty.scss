@@ -2,11 +2,11 @@
   background-color: #fff;
   color: #18445d;
   &__container {
-    padding: 10px 25px 30px 25px;
+    padding: 10px 0 30px 0;
   }
   &__image-container {
-    height: 80px;
-    margin-bottom: 15px;
+    height: 90px;
+    margin-bottom: 10px;
   }
   &__image {
     display: block;
@@ -15,12 +15,12 @@
     margin: 0 auto;
   }
   &__title {
-    font-size: 10px;
+    font-size: 16px;
     text-transform: uppercase;
     font-family: 'RalewayBold';
   }
   &__text {
-    font-size: 10px;
+    font-size: 14px;
     &:last-child {
       margin: 0;
     }

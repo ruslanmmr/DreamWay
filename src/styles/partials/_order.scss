@@ -50,9 +50,9 @@
     display: block;
     text-align: center;
     font-family: 'RalewayBold';
+    font-size: 16px;
   }
   &__text {
-    font-size: 9px;
     text-align: center;
     display: block;
   }
@@ -61,12 +61,6 @@
 @media all and(min-width: 576px) {
   .order__title {
     padding: 25px 0;
-  }
-  .order-block__title {
-    font-size: 16px;
-  }
-  .order-block__text {
-    font-size: 14px;
   }
   .order__container {
     padding: 25px 0;

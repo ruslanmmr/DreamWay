@@ -1,13 +1,10 @@
 .advantages {
   background-color: #fff;
-  .container {
-    padding: 0 35px;
-  }
   &__container {
-    padding: 15px 0;
+    padding: 20px 0;
   }
   .slick-arrow {
-    top: 25px;
+    top: 33px;
   }
 }
 .advantages-slider {
@@ -20,7 +17,7 @@
   padding: 0 10px;
   &__image-container {
     position: relative;
-    height: 80px;
+    height: 100px;
   }
   &__image {
     display: block;
@@ -29,12 +26,14 @@
     margin: 0 auto;
   }
   &__text-container {
-    padding-top: 10px;
     color: #15364b;
-    font-size: 8px;
+    font-size: 12px;
+    padding-top: 1.2em;
   }
   &__title {
     font-family: 'RalewayBold';
+    padding-bottom: 0.3em;
+    display: block;
   }
   &__text {
     margin: 0;
@@ -43,9 +42,6 @@
 
 @media all and(min-width: 576px) {
   .advantages {
-    .container {
-      padding: 0 20px;
-    }
     &__container {
       padding: 35px 0;
     }
