@@ -161,16 +161,18 @@ function Slider() {
     slider2.slick({
       arrows: true,
       slidesToScroll: 1,
+      slidesToShow: 1,
       dots: false,
       adaptiveHeight: true,
+      mobileFirst: true,
       responsive: [{
-          breakpoint: 576,
+          breakpoint: 0,
           settings: {
             slidesToShow: 1
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 576,
           settings: {
             slidesToShow: 2
           }
