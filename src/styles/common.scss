@@ -9,6 +9,7 @@ body {
   position: relative;
   overflow-x: hidden;
   transition: transform 0.3s;
+  min-width: 768px;
 }
 .wrapper {
   margin: 0 auto;
