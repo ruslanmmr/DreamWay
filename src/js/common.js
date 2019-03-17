@@ -76,7 +76,6 @@ function popup() {
   var openButton = $('.popup-link');
   var closeButton = $('.popup__close-button, .popup__close');
   var popup = $('.popup');
-  var dataVal = $(this).parents('.catalogue-block').data('value');
 
   function closePopup() {
     popup 
@@ -89,9 +88,10 @@ function popup() {
 
   openButton.click( function(event){
     event.preventDefault();
-    dataVal = $(this).parents('.catalogue-block').data('value');
-    $($(this).attr('href')).find('.form__option').removeAttr('selected');
-    $($(this).attr('href')).find(`.form__option[data-value=${dataVal}]`).attr('selected', 'selected');
+    var index = $(this).parents('.catalogue-block').index();
+    console.log(index);
+    $('#modal1').find('.form__option').removeAttr('selected');
+    $('#modal1').find('.form__option').eq(index).attr('selected', 'selected');
     $($(this).attr('href')).css('display', 'block').animate({opacity: 1}, 300);
     $('body').css('overflow', 'hidden');
   });
