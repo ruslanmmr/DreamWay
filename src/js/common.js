@@ -89,7 +89,6 @@ function popup() {
   openButton.click( function(event){
     event.preventDefault();
     var index = $(this).parents('.catalogue-block').index();
-    console.log(index);
     $('#modal1').find('.form__option').removeAttr('selected');
     $('#modal1').find('.form__option').eq(index).attr('selected', 'selected');
     $($(this).attr('href')).css('display', 'block').animate({opacity: 1}, 300);
